@@ -1,0 +1,53 @@
+/* Custom utilities */
+.priority-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.todo-card {
+    transition: all 0.2s ease;
+}
+
+.todo-card:hover {
+    transform: translateY(-2px);
+}
+
+.completed-strike {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.checkbox-custom {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d1d5db;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.checkbox-custom:checked {
+    background-color: #10b981;
+    border-color: #10b981;
+}
+
+.checkbox-custom:checked::after {
+    content: '✓';
+    display: block;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+}
+
+.overdue-badge {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}

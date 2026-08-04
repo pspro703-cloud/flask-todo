@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-md mx-auto px-4 py-16">
+    <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-8">
+        <h1 class="text-2xl font-bold text-center mb-2">Welcome Back</h1>
+        <p class="text-gray-500 text-center mb-8">Sign in to manage your todos</p>
+        <form method="POST" class="space-y-5">
+            {{ form.hidden_tag() }}
+            <div>
+                {{ form.username(class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none", placeholder="Username") }}
+            </div>
+            <div>
+                {{ form.password(class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent outline-none", placeholder="Password") }}
+            </div>
+            {{ form.submit(class="w-full bg-indigo-600 text-white py-3 rounded-lg hover:bg-indigo-700 font-medium cursor-pointer") }}
+        </form>
+        <p class="text-center mt-6 text-gray-600 text-sm">No account? <a href="{{ url_for('auth.register') }}" class="text-indigo-600 hover:underline font-medium">Create one</a></p>
+    </div>
+</div>
+{% endblock %}

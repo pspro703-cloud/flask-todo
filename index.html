@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto px-4 py-20 text-center">
+    <h1 class="text-5xl font-bold text-gray-900 mb-6">Stay Organized</h1>
+    <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+        A clean, fast todo app to manage your tasks. Set priorities, due dates, categories, and track your progress.
+    </p>
+    <div class="flex justify-center gap-4">
+        <a href="{{ url_for('auth.register') }}" class="bg-indigo-600 text-white px-8 py-3 rounded-lg text-lg font-medium hover:bg-indigo-700 transition">Get Started Free</a>
+        <a href="{{ url_for('auth.login') }}" class="px-8 py-3 border border-gray-300 rounded-lg text-lg font-medium text-gray-700 hover:bg-gray-50 transition">Sign In</a>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center text-2xl mb-4">📝</div>
+            <h3 class="font-bold text-lg mb-2">Create Todos</h3>
+            <p class="text-gray-600">Add tasks with descriptions, priorities, and due dates.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center text-2xl mb-4">🏷️</div>
+            <h3 class="font-bold text-lg mb-2">Organize</h3>
+            <p class="text-gray-600">Use custom categories and color-coded priorities.</p>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+            <div class="w-12 h-12 bg-amber-100 rounded-lg flex items-center justify-center text-2xl mb-4">📊</div>
+            <h3 class="font-bold text-lg mb-2">Track Progress</h3>
+            <p class="text-gray-600">See your completion stats and stay motivated.</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
